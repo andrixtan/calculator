@@ -10,10 +10,15 @@
 
 .display {
 	display: flex;
+	white-space: nowrap;
 	width: 460px;
 	margin: 20px auto;
-	height: 100px;
-	background-color: grey
+	background-color: grey;
+	font-size: 65.5px;
+	justify-content: end;
+	align-items: center;
+	overflow: hidden;
+	padding: 25px 0px;
 }
 
 .buttons-body {
@@ -32,13 +37,13 @@
 }
 
 .button {
+	display: flex;
 	width: 103.75px;  /*15px gap between each buttons */
-	height: 77.75px; /*height of each button 98.75px */
-	padding-top: 22px;
+	height: 98.75px; /*height of each button 98.75px */
 	background-color: rgb(155, 155, 255);
 	border-style: solid;
-	text-align: center;
-	vertical-align: middle;
+	justify-content: center;
+	align-items: center;
 	font-size: 50px;
 }
 
