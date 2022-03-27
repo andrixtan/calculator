@@ -24,12 +24,31 @@ let displayScreen = document.querySelector('.display');
 // 	displayScreen = display.textContent;
 // })
 
-const btns = document.querySelectorAll('.button')
-btns.forEach((btn) => {
+const digitBtns = document.querySelectorAll('.digit')
+digitBtns.forEach((btn) => {
 	btn.addEventListener('click', (e) => {
-		// console.log(e);
 		display += e.target.textContent;
-		// console.log(display);
 		displayScreen.textContent = display;
+	})
+})
+
+let firstNumber = '';
+let secondNumber = '';
+let operator = '';
+
+const operatorBtns = document.querySelectorAll('.operator')
+operatorBtns.forEach((btn) => {
+	btn.addEventListener('click', (e) => {
+		if (!operator) {
+			firstNumber = display;
+			if (!firstNumber) return
+			operator = e.target.textContent;
+			console.log(operator);
+			console.log(firstNumber);
+			display = '';
+		} else {
+			operator = e.target.textContent;
+			console.log(operator);
+		}
 	})
 })
