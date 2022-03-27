@@ -12,13 +12,13 @@
 	display: flex;
 	white-space: nowrap;
 	width: 460px;
+	height: 124.695px;
 	margin: 20px auto;
 	background-color: grey;
 	font-size: 65.5px;
 	justify-content: end;
 	align-items: center;
 	overflow: hidden;
-	padding: 25px 0px;
 }
 
 .buttons-body {
@@ -45,5 +45,11 @@
 	justify-content: center;
 	align-items: center;
 	font-size: 50px;
+}
+
+.button:active {
+	transform: scale(1.1);
+	border-color: #ffc600;
+	box-shadow: 0 0 1rem #ffc600;
 }
 
