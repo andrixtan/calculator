@@ -1,10 +1,10 @@
 const add = (first, second) => {
-	// if (first % 1 !== 0 || second % 1 !== 0) {
-	// 	return parseFloat(first) + parseFloat(second)
-	// }
-	// else {
+	if (first % 1 !== 0 || second % 1 !== 0) {
+		return parseFloat(first) + parseFloat(second)
+	}
+	else {
 	return parseInt(first) + parseInt(second);
-	// }
+	}
 };
 const subtract = (first, second) => {
 	return first - second;
@@ -30,6 +30,20 @@ digitBtns.forEach((btn) => {
 		// console.log(display);
 	});
 });
+
+const dotBtn = document.querySelector('.dot');
+dotBtn.addEventListener('click', (e) => {
+	const dotChar = '.';
+	if (displayScreen.textContent.includes(dotChar)) {
+		return
+	} else if (!displayScreen.textContent) {
+		display = '0.';
+		displayScreen.textContent = display;
+	} else {
+		display += e.target.textContent;
+		displayScreen.textContent = display;
+	} 
+})
 
 const backspaceBtn = document.querySelector(".backspace");
 backspaceBtn.addEventListener("click", (e) => {
