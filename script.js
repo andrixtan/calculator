@@ -1,5 +1,10 @@
 const add = (first, second) => {
+	// if (first % 1 !== 0 || second % 1 !== 0) {
+	// 	return parseFloat(first) + parseFloat(second)
+	// }
+	// else {
 	return parseInt(first) + parseInt(second);
+	// }
 }
 const subtract = (first, second) => {
 	return first - second
@@ -33,13 +38,16 @@ let operator = '';
 const operatorBtns = document.querySelectorAll('.operator')
 operatorBtns.forEach((btn) => {
 	btn.addEventListener('click', (e) => {
-		if (!operator) {
+		if (!firstNumber && !operator && !display) {
+			return
+		}
+		  else if (!operator) {
 			firstNumber = displayScreen.textContent;
 			display = '';
 			operator = e.target.textContent;
 		} else if (firstNumber && operator && !display) {
 			operator = e.target.textContent;
-			// console.log(operator);
+			console.log(operator);
 		} else if (firstNumber && operator && display) {
 			secondNumber = display;
 			// console.log(operator)
@@ -67,7 +75,7 @@ equalBtn.addEventListener('click', (e) => {
 	displayScreen.textContent = evaluate(firstNumber, secondNumber, operator)
 	display = '';
 	operator = '';
-	firstNumber = '';
+	firstNumber = displayScreen.textContent;
 	secondNumber = '';
 })
 

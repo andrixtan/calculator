@@ -2,7 +2,7 @@
 	display: flex;
 	margin: 11% auto;
 	height: 600px;
-	width: 500px;
+	width: 620px;
 	background-color: rgb(193, 193, 193);
 	border-style: solid;
 	flex-direction: column;
@@ -11,7 +11,7 @@
 .display {
 	display: flex;
 	white-space: nowrap;
-	width: 460px;
+	width: 580px;
 	height: 124.695px;
 	margin: 20px auto;
 	background-color: grey;
@@ -24,11 +24,13 @@
 .buttons-body {
 	display: flex;
 	flex-direction: column;
-	width: 460px;
+	width: 580px;
 	height: 440px;
-	margin: 0px 20px auto auto;
+	margin: auto auto;
 	background-color: rgb(193, 193, 193);
-	justify-content: space-between;
+	/* justify-content: space-between; */
+	padding-bottom: 20px;
+	gap: 8px;
 }
 
 .row {
@@ -53,3 +55,35 @@
 	box-shadow: 0 0 1rem #ffc600;
 }
 
+.operator, .equals {
+	background-color: rgb(251, 193, 94);
+}
+
+.backspace {
+	width: 222.5px;
+}
+
+.last-row {
+	justify-content: start;
+	gap: 11.5625px; /* Gap of 11.5625px */
+}
+
+.last-2-rows {
+	display: flex;
+	flex-direction: column;
+	width: 461.6875px;
+	gap: 8px;
+}
+
+.bottom-half {
+	display: flex;
+	justify-content: space-between;
+}
+
+.plusbutton {
+	height: auto;
+}
+
+.backspace {
+	background-color: rgb(255, 151, 151);
+}
